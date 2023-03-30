@@ -7,7 +7,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class SortedList {
-    List<Cat> cats;
+    private List<Cat> cats;
 
     public SortedList(List<Cat> cats) {
         this.cats = cats;
@@ -31,16 +31,16 @@ public class SortedList {
 
     public void random(){
         Collections.shuffle(cats);
-        System.out.println(cats);
+        System.out.println("Random Cats: " + cats);
     }
 
     public void sortByName(){
         Collections.sort(cats);
-        System.out.println(cats);
+        System.out.println("Sorted by name: " + cats);
     }
 
     public void sortComparator(){
         cats.sort(new AgeColorNameComparator());
-        System.out.println(cats);
+        System.out.println("Comparator sorted: " + cats);
     }
 }
