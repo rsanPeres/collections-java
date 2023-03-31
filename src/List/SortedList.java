@@ -4,6 +4,7 @@ import List.CatsComparator.AgeColorNameComparator;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class SortedList {
@@ -42,5 +43,13 @@ public class SortedList {
     public void sortComparator(){
         cats.sort(new AgeColorNameComparator());
         System.out.println("Comparator sorted: " + cats);
+    }
+
+    public  void compare(){
+        cats.sort(Comparator.comparing((Cat cat) -> cat.getName()));
+    }
+
+    public void compare2(){
+        cats.sort(Comparator.comparing(Cat::getName));
     }
 }

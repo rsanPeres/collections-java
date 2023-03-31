@@ -65,8 +65,12 @@ public class Main {
         for (int i = 1; i <= qtd2; i++){
             System.out.println("Digite o nome do dono do gato " + i + "\n");
             String nameD = sc.nextLine();
+            System.out.println("Digite o nome do dono do gato " + i + "\n");
+            String nameC = sc.nextLine();
+            System.out.println("Digite o telefone " + i + "\n");
+            int phone = sc.nextInt();
 
-            family.add(new Owner(nameD), sort.getCat(i - 1));
+            family.add(new Owner(nameD, nameC, phone), sort.getCat(i - 1));
         }
 
         family.printAll();
